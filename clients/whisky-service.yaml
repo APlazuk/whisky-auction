@@ -1,0 +1,47 @@
+openapi: 3.0.1
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+- url: http://localhost:8080
+  description: Generated server url
+paths:
+  /whisky/auction-info:
+    get:
+      tags:
+      - whisky-controller
+      operationId: getAuctionInfo
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Auction"
+components:
+  schemas:
+    Auction:
+      type: object
+      properties:
+        name:
+          type: string
+        slug:
+          type: string
+        url:
+          type: string
+        buyers_fee:
+          type: integer
+          format: int32
+        sellers_fee:
+          type: integer
+          format: int32
+        reserve_fee:
+          type: integer
+          format: int32
+        listing_fee:
+          type: integer
+          format: int32
+        base_currency:
+          type: string

@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="text-center mt-5">
+    <h1>All Whisky Auctions</h1>
+  </div>
+  <table id="datatablesSimple" class="table table-bordered table-striped">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Slug</th>
+      <th>URL</th>
+      <th>Buyers Fee</th>
+      <th>Sellers Fee</th>
+      <th>Reserve Fee</th>
+      <th>Listing Fee</th>
+      <th>Base Currency</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let info of auctionInfo">
+      <td class="col-sm-1"><span>{{info.name}}</span></td>
+      <td class="col-sm-3"><span>{{info.slug}}</span></td>
+      <td class="col-sm-3"><span>{{info.url}}</span></td>
+      <td class="col-sm-3"><span>{{info.buyers_fee}}</span></td>
+      <td class="col-sm-3"><span>{{info.sellers_fee}}</span></td>
+      <td class="col-sm-3"><span>{{info.reserve_fee}}</span></td>
+      <td class="col-sm-3"><span>{{info.listing_fee}}</span></td>
+      <td class="col-sm-3"><span>{{info.base_currency}}</span></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
